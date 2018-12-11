@@ -5,6 +5,11 @@
             :to="href"
             :class="{ active: active }"
         >
+            <i
+                v-if="icon"
+                :class="'icon icon-' + icon"
+            ></i>
+
             <slot></slot>
         </router-link>
     </li>
@@ -14,6 +19,9 @@
 export default {
     props: {
         href: {
+            type: String,
+        },
+        icon: {
             type: String,
         },
         active: {
@@ -49,40 +57,5 @@ export default {
 
     li > a i.icon-home {
         top: 1px;
-    }
-
-    li:hover .dropdown-list {
-        display: block;
-    }
-
-    li .dropdown-list {
-        display: none;
-        position: absolute;
-        right: 0;
-        width: 80px;
-    }
-
-    li .dropdown-list ul li a {
-        display: block;
-        height: 42px;
-        line-height: 42px;
-        padding: 0 10px;
-        background: #4dabff;
-        text-align: center;
-        color: #fff;
-    }
-
-    li .dropdown-list ul li a:hover {
-        background: #339dff;
-    }
-
-    li .dropdown-list ul li i {
-        margin-right: 3px;
-        vertical-align: -1px;
-        font-size: 16px;
-    }
-
-    li .dropdown-list ul li:last-child a {
-        border-radius: 0 0 4px 4px;
     }
 </style>
