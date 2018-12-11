@@ -1,17 +1,17 @@
 <template>
     <main>
-        <the-nav-bar></the-nav-bar>
+        <top-menu></top-menu>
         <router-view></router-view>
     </main>
 </template>
 
 <script>
 
-import TheNavBar from "./components/TheNavBar.vue"
+import TopMenu from "./components/TopMenu.vue"
 
 export default {
     components: {
-        TheNavBar,
+        TopMenu,
     },
     data() {
         return ({
