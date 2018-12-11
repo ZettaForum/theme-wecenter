@@ -13,7 +13,8 @@
         "url": "https://github.com/ZettaForum/theme-wecenter/issues"
     },
     "dependencies": {
-        "vue": "^2.5.17"
+        "vue": "^2.5.17",
+        "vue-router": "^3.0.2"
     },
     "devDependencies": {
         "@babel/core": "^7.2.0",
