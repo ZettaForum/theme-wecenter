@@ -51,6 +51,8 @@ export default {
 
 <style>
     .aw-search-box {
+        position: relative;
+        float: left;
         margin: 10px 0;
     }
 

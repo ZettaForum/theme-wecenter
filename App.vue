@@ -19,8 +19,3 @@ export default {
     },
 }
 </script>
-
-<style>
-    @import url("./lib/bootstrap.css");
-    @import url("./lib/common.css");
-</style>

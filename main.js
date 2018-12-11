@@ -6,6 +6,10 @@
  * @license MIT
  */
 
+import "./lib/bootstrap.css"
+import "./lib/icon.css"
+import "./lib/common.css"
+
 import Vue from "vue/dist/vue.runtime.esm.js"
 import VueRouter from "vue-router"
 

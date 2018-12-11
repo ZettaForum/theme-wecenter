@@ -57,10 +57,4 @@ export default {
         min-height: 50px;
         background-color: #499ef3;
     }
-
-    .aw-search-box,
-    .aw-top-nav {
-        position: relative;
-        float: left;
-    }
 </style>
