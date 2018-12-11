@@ -29,7 +29,7 @@
         "build": "parcel build main.js --public-url ./ --detailed-report",
         "watch": "parcel watch main.js --public-url ./ ",
         "watch:disable-HMR": "npm run watch -- --no-hmr",
-        "http-server": "http-server . -p 8082 -c-1 -s"
+        "http-server": "http-server . -p 8082 -c-1"
     },
     "license": "MIT"
 }
