@@ -1,0 +1,35 @@
+{
+    "name": "@zetta-forum/theme-wecenter",
+    "version": "0.1.0",
+    "description": "ZettaForum 泽虵论坛 WeCenter主题",
+    "author": "Xmader",
+    "main": "main.js",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/ZettaForum/theme-wecenter.git"
+    },
+    "homepage": "https://github.com/ZettaForum/theme-wecenter#readme",
+    "bugs": {
+        "url": "https://github.com/ZettaForum/theme-wecenter/issues"
+    },
+    "dependencies": {
+        "vue": "^2.5.17",
+        "vue-material": "~0.8.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.1.6",
+        "@babel/plugin-transform-runtime": "^7.1.0",
+        "@vue/component-compiler-utils": "^2.3.0",
+        "http-server": "^0.11.1",
+        "parcel-bundler": "^1.9.7",
+        "vue-hot-reload-api": "^2.3.1",
+        "vue-template-compiler": "^2.5.17"
+    },
+    "scripts": {
+        "build": "parcel build main.js --public-url ./ --detailed-report",
+        "watch": "parcel watch main.js --public-url ./ ",
+        "watch:disable-HMR": "npm run watch -- --no-hmr",
+        "http-server": "http-server . -p 8082 -c-1 -s"
+    },
+    "license": "MIT"
+}
