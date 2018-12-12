@@ -102,6 +102,10 @@ const _UNIT_TEST = () => {  // eslint-disable-line
                 icon: "bulb"
             },
         ],
+        footer: {
+            // author: "",
+            year: 2018
+        },
         logoLink: "/"
     }
 
@@ -110,6 +114,15 @@ const _UNIT_TEST = () => {  // eslint-disable-line
         language: "zh_CN",
         logo: "logo.png"
     }, init)
+
+    const footer = init.footer
+    if (!(typeof footer == "string") && !(footer instanceof Element)) {
+        // Define the default values of init.footer
+        init.footer = Object.assign({}, {
+            year: 2018,
+            author: "Xmader",
+        }, footer)
+    }
 
     ThemeWeCenter(init)
 }

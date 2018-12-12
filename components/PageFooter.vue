@@ -16,6 +16,14 @@
                     </a>
                 </span>
             </template>
+
+            <template v-else-if="footerType == 'string'">
+                <div v-html="footer"></div>
+            </template>
+
+            <template v-else>
+                <div v-html="getOuterHTML(footer)"></div>
+            </template>
         </div>
     </div>
 </template>
@@ -55,9 +63,22 @@ export default {
             }
         }
     },
+    methods: {
+        /** 
+         * @param {Element} e
+         */
+        getOuterHTML(e) {
+            return e.outerHTML
+        }
+    }
 }
 </script>
 
 <style>
+    .aw-footer {
+        padding: 30px 0 10px;
+        font-size: 12px;
+        text-align: center;
+    }
 </style>
 
