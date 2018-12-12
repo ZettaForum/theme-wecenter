@@ -7,7 +7,7 @@
  */
 
 import "./lib/bootstrap-without-glyphicons.min.css"
-import "./lib/icons/icomoon.css"
+import "./lib/icons/icomoon.min.css"
 import "./lib/common.css"
 
 import Vue from "vue/dist/vue.runtime.esm.js"
