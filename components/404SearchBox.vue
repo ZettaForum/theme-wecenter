@@ -1,35 +1,42 @@
 
 <template>
     <div class="aw-search-box hidden-sm">
-        <form
-            class="navbar-search"
-            action="search/"
-            id="global_search_form"
-            method="post"
-        >
-            <div class="input-group">
-                <input
-                    class="form-control search-query"
-                    type="text"
-                    :placeholder="'search-box.placeholder' | translate"
-                    autocomplete="off"
-                    name="q"
-                    id="aw-search-query"
-                />
-                <span
-                    class="input-group-addon"
-                    :title="'search-box.search' | translate"
-                    id="global_search_btns"
-                    onClick="$('#global_search_form').submit();"
-                ><i class="icon icon-search"></i></span>
-            </div>
-        </form>
+        <div class="input-group">
+            <input
+                class="form-control"
+                type="text"
+                :placeholder="'search-box.placeholder' | translate"
+                autocomplete="off"
+                v-model="text"
+                @keyup.enter="search"
+            />
+            <span
+                class="input-group-addon"
+                :title="'search-box.search' | translate"
+                id="global_search_btns"
+                @click="search"
+            >
+                <i class="icon icon-search"></i>
+            </span>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-
+    data() {
+        return ({
+            text: ""
+        })
+    },
+    methods: {
+        search() {
+            this.$router.push({
+                path: "/search",
+                query: { q: this.text }
+            })
+        }
+    }
 }
 </script>
 
@@ -64,6 +71,7 @@ export default {
         border-color: #54beff;
         color: #fff;
         background-color: #54beff;
+        cursor: pointer;
     }
 </style>
 

@@ -1,51 +1,74 @@
 
 <template>
-    <div class="aw-search-box hidden-xs hidden-sm">
-        <form
-            class="navbar-search"
-            action="/search/"
-            id="global_search_form"
-            method="post"
+    <div
+        class="aw-search-box hidden-xs hidden-sm"
+        @click.stop.prevent="show"
+        @mouseleave="hide"
+    >
+        <input
+            class="form-control"
+            type="text"
+            :placeholder="'search-box.placeholder' | translate"
+            autocomplete="off"
+            v-model="text"
+            @keyup.enter="search"
+        />
+
+        <span
+            :title="'search-box.search' | translate"
+            id="global_search_btns"
+            @click="search"
         >
-            <input
-                class="form-control search-query"
-                type="text"
-                placeholder="搜索问题、话题或人"
-                autocomplete="off"
-                name="q"
-                id="aw-search-query"
-            >
-            <span
-                title="搜索"
-                id="global_search_btns"
-                onclick="$('#global_search_form').submit();"
-            >
-                <i class="icon icon-search"></i>
-            </span>
-            <div class="aw-dropdown">
-                <div class="mod-body">
-                    <p class="title">输入关键字进行搜索</p>
-                    <ul class="aw-dropdown-list collapse"></ul>
-                    <p class="search">
-                        <span>搜索:</span>
-                        <a onclick="$('#global_search_form').submit();"></a>
-                    </p>
-                </div>
-                <div class="mod-footer">
-                    <a
-                        href="/publish"
-                        onclick="$('#header_publish').click();"
-                        class="pull-right btn btn-mini btn-success publish"
-                    >发起问题</a>
-                </div>
+            <i class="icon icon-search"></i>
+        </span>
+
+        <div
+            class="aw-dropdown"
+            v-show="showDropdownList"
+        >
+            <div class="mod-body">
+                <p class="title">输入关键字进行搜索</p>
+                <ul class="aw-dropdown-list collapse"></ul>
+                <p class="search">
+                    <span>搜索:</span>
+                    <a @click="search"></a>
+                </p>
             </div>
-        </form>
+            <div class="mod-footer">
+                <router-link
+                    to="/publish"
+                    class="pull-right btn btn-mini btn-success publish"
+                    @click="hide"
+                >
+                    发起问题
+                </router-link>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-
+    data() {
+        return ({
+            text: "",
+            showDropdownList: false
+        })
+    },
+    methods: {
+        search() {
+            this.$router.push({
+                path: "/search",
+                query: { q: this.text }
+            })
+        },
+        hide() {
+            this.showDropdownList = false
+        },
+        show() {
+            this.showDropdownList = true
+        }
+    }
 }
 </script>
 
@@ -72,6 +95,7 @@ export default {
     }
 
     .aw-search-box .aw-dropdown {
+        display: block;
         width: 355px;
     }
 
