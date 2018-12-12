@@ -1,7 +1,17 @@
 
 <template>
     <div class="aw-logo hidden-xs">
-        <router-link :to="link" :style="background"></router-link>
+        <a
+            v-if="link.match(/^http(s)?:/)"
+            :href="link"
+            :style="background"
+        ></a>
+
+        <router-link
+            v-else
+            :to="link"
+            :style="background"
+        ></router-link>
     </div>
 </template>
 

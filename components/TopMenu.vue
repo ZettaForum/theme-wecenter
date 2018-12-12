@@ -2,7 +2,7 @@
     <div class="aw-top-menu-wrap">
         <div class="container">
 
-            <top-menu-logo :src="init.logo"></top-menu-logo>
+            <top-menu-logo :src="init.logo" :link="init.nameLink"></top-menu-logo>
 
             <top-menu-search-box></top-menu-search-box>
 

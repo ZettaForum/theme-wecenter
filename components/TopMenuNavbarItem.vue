@@ -1,7 +1,21 @@
 
 <template>
     <li>
+        <a
+            v-if="href.match(/^http(s)?:/)"
+            :href="href"
+            :class="{ active: active }"
+        >
+            <i
+                v-if="icon"
+                :class="'icon icon-' + icon"
+            ></i>
+
+            <slot></slot>
+        </a>
+
         <router-link
+            v-else
             :to="href"
             :class="{ active: active }"
         >
