@@ -11,14 +11,14 @@
                 <input
                     class="form-control search-query"
                     type="text"
-                    :placeholder="'搜索问题、话题或人'"
+                    :placeholder="'search-box.placeholder' | translate"
                     autocomplete="off"
                     name="q"
                     id="aw-search-query"
                 />
                 <span
                     class="input-group-addon"
-                    :title="'搜索'"
+                    :title="'search-box.search' | translate"
                     id="global_search_btns"
                     onClick="$('#global_search_form').submit();"
                 ><i class="icon icon-search"></i></span>

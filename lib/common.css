@@ -254,7 +254,7 @@ body {
     font-size: 14px;
     line-height: 160%;
     color: #666;
-    background: url('img/bg.gif') repeat;
+    background: #f4f4f4;
 }
 
 body,
@@ -4445,63 +4445,6 @@ blockquote {
 }
 
 /* 404页面 */
-
-.aw-404 {
-    background: #f4f4f4;
-}
-
-.aw-404 .aw-footer-wrap {
-    background-color: #fff;
-}
-
-.aw-404-wrap {
-    width: 500px;
-    height: auto;
-    margin: 100px auto 300px;
-    text-align: center;
-}
-
-.aw-404-wrap p {
-    margin: 45px auto 30px;
-    font-size: 18px;
-}
-
-.aw-404-wrap p a {
-    font-size: 18px;
-    color: #54beff;
-}
-
-.aw-404-wrap .aw-search-box {
-    width: 460px;
-    float: none;
-    margin: 0 auto;
-}
-
-.aw-404-wrap .aw-search-box .form-control {
-    border-radius: 0;
-    border-color: #54beff;
-}
-
-.aw-404-wrap .aw-search-box .input-group {
-    margin: 0 auto;
-}
-
-.aw-404-wrap .aw-search-box .input-group input {
-    width: 460px;
-    padding-right: 50px;
-}
-
-.aw-404-wrap .aw-search-box #global_search_btns {
-    top: 0;
-    right: 0;
-    z-index: 10;
-    width: 40px;
-    height: 32px;
-    border-radius: 0;
-    border-color: #54beff;
-    color: #fff;
-    background-color: #54beff;
-}
 
 #browser-not-support {
     position: fixed;

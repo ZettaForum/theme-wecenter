@@ -38,8 +38,10 @@ const routes = [
  */
 export const ThemeWeCenter = (init) => {
 
-    if (top.ZettaForum) {
-        const { translate } = new top.ZettaForum.Translator(init.language)
+    const ZettaForum = top.ZettaForum
+
+    if (ZettaForum) {
+        const { translate } = new ZettaForum.Translator(init.language)
         Vue.filter("translate", translate)
     } else {
         Vue.filter("translate", (str) => {
@@ -73,59 +75,6 @@ export const ThemeWeCenter = (init) => {
 
 export default ThemeWeCenter
 
-if (top.ZettaForum) {
+if (top && top.ZettaForum) {
     top.ZettaForum.defineThemeName("wecenter", ThemeWeCenter)
 }
-
-
-const _UNIT_TEST = () => {  // eslint-disable-line
-
-    let init = {
-        el: "#app",
-        name: "test",
-        language: "zh_CN",
-        logo: "lib/img/logo.png",
-        routerMode: "hash",
-        topNav: [
-            {
-                name: "发现",
-                href: "/",
-                icon: "list"
-            },
-            {
-                name: "话题",
-                href: "/topic/",
-                icon: "topic"
-            },
-            {
-                name: "公告",
-                href: "/help/",
-                icon: "bulb"
-            },
-        ],
-        footer: {
-            // author: "",
-            year: 2018
-        },
-        logoLink: "/"
-    }
-
-    init = Object.assign({
-        theme: "wecenter",
-        language: "zh_CN",
-        logo: "logo.png"
-    }, init)
-
-    const footer = init.footer
-    if (!(typeof footer == "string") && !(footer instanceof Element)) {
-        // Define the default values of init.footer
-        init.footer = Object.assign({}, {
-            year: 2018,
-            author: "Xmader",
-        }, footer)
-    }
-
-    ThemeWeCenter(init)
-}
-
-_UNIT_TEST()

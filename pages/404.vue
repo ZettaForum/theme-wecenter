@@ -5,12 +5,12 @@
             <div class="row">
                 <h1>404 Not Found</h1>
                 <p>
-                    {{"你访问的页面不存在"}}，
-                    {{"请"}}
+                    {{ "404page.page_not_found" | translate }}
+                    {{ "404page.please" | translate }}
                     <a @click="back">
-                        {{"返回"}}
+                        {{ "404page.return" | translate }}
                     </a>
-                    {{"或搜索相关内容"}}
+                    {{ "404page.or_search_for_related_content" | translate }}
                 </p>
                 <search-box></search-box>
             </div>
