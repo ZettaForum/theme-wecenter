@@ -7,7 +7,7 @@
  */
 
 import "./lib/bootstrap.css"
-import "./lib/icon.css"
+import "./lib/icons/icomoon.css"
 import "./lib/common.css"
 
 import Vue from "vue/dist/vue.runtime.esm.js"
