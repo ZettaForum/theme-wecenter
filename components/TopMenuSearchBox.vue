@@ -2,7 +2,7 @@
 <template>
     <div
         class="aw-search-box hidden-xs hidden-sm"
-        @click.stop.prevent="show"
+        @keyup.esc="hide"
         @mouseleave="hide"
     >
         <input
@@ -12,6 +12,7 @@
             autocomplete="off"
             v-model="text"
             @keyup.enter="search"
+            @focus="show"
         />
 
         <span
@@ -22,28 +23,30 @@
             <i class="icon icon-search"></i>
         </span>
 
-        <div
-            class="aw-dropdown"
-            v-show="showDropdownList"
-        >
-            <div class="mod-body">
-                <p class="title">输入关键字进行搜索</p>
-                <ul class="aw-dropdown-list collapse"></ul>
-                <p class="search">
-                    <span>搜索:</span>
-                    <a @click="search"></a>
-                </p>
+        <transition name="dropdown">
+            <div
+                class="aw-dropdown"
+                v-show="showing"
+            >
+                <div class="mod-body">
+                    <p class="title">输入关键字进行搜索</p>
+                    <ul class="aw-dropdown-list collapse"></ul>
+                    <p class="search">
+                        <span>搜索:</span>
+                        <a @click="search"></a>
+                    </p>
+                </div>
+                <div class="mod-footer">
+                    <router-link
+                        to="/publish"
+                        class="pull-right btn btn-mini btn-success publish"
+                        @click="hide"
+                    >
+                        发起问题
+                    </router-link>
+                </div>
             </div>
-            <div class="mod-footer">
-                <router-link
-                    to="/publish"
-                    class="pull-right btn btn-mini btn-success publish"
-                    @click="hide"
-                >
-                    发起问题
-                </router-link>
-            </div>
-        </div>
+        </transition>
     </div>
 </template>
 
@@ -52,7 +55,7 @@ export default {
     data() {
         return ({
             text: "",
-            showDropdownList: false
+            showing: false
         })
     },
     methods: {
@@ -63,14 +66,26 @@ export default {
             })
         },
         hide() {
-            this.showDropdownList = false
+            this.showing = false
         },
         show() {
-            this.showDropdownList = true
+            this.showing = true
         }
     }
 }
 </script>
+
+<style scoped>
+    .dropdown-enter-active,
+    .dropdown-leave-active {
+        transition: opacity 0.5s;
+    }
+    .dropdown-enter,
+    .dropdown-leave-to {
+        opacity: 0;
+    }
+</style>
+
 
 <style>
     .aw-search-box {
