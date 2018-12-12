@@ -6,7 +6,7 @@
  * @license MIT
  */
 
-import "./lib/bootstrap.css"
+import "./lib/bootstrap-without-glyphicons.min.css"
 import "./lib/icons/icomoon.css"
 import "./lib/common.css"
 
