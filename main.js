@@ -83,7 +83,26 @@ const _UNIT_TEST = () => {  // eslint-disable-line
         el: "#app",
         name: "test",
         language: "zh_CN",
-        logo: "lib/img/logo.png"
+        logo: "lib/img/logo.png",
+        routerMode: "hash",
+        topNav: [
+            {
+                name: "发现",
+                href: "/",
+                icon: "list"
+            },
+            {
+                name: "话题",
+                href: "/topic/",
+                icon: "topic"
+            },
+            {
+                name: "公告",
+                href: "/help/",
+                icon: "bulb"
+            },
+        ],
+        logoLink: "/"
     }
 
     init = Object.assign({

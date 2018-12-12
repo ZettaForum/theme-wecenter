@@ -10,12 +10,13 @@
             :class="{ active: show }"
         >
             <ul class="nav navbar-nav">
-                <template v-for="topNavItem of init.topNav">
+                <template v-for="(topNavItem, index) of init.topNav">
                     <navbar-item
                         :href="topNavItem.href"
                         :icon="topNavItem.icon"
-                        :key="topNavItem.name"
+                        :key="index"
                         :active="$route.path == topNavItem.href"
+                        @click="show = false"
                     >
                         {{ topNavItem.name }}
                     </navbar-item>

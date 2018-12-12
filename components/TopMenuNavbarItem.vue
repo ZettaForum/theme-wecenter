@@ -1,6 +1,6 @@
 
 <template>
-    <li>
+    <li @click="$emit('click')">
         <a
             v-if="href.match(/^http(s)?:/)"
             :href="href"
