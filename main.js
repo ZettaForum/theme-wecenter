@@ -14,6 +14,7 @@ import Vue from "vue/dist/vue.runtime.esm.js"
 import VueRouter from "vue-router"
 
 import App from "./App.vue"
+import PageNotFound from "./pages/404.vue"
 
 Vue.use(VueRouter)
 
@@ -26,10 +27,10 @@ const routes = [
     //     path: "/user/:id",
     //     component: User
     // },
-    // {
-    //     path: "*",  // 404
-    //     component: NotFoundComponent
-    // }
+    {
+        path: "*",  // 404
+        component: PageNotFound
+    }
 ]
 
 /**
