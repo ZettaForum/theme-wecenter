@@ -2,11 +2,12 @@
 <template>
     <div class="aw-top-nav navbar">
 
-        <navbar-header></navbar-header>
+        <navbar-header @click="show = !show"></navbar-header>
 
         <nav
             role="navigation"
-            class="collapse navbar-collapse bs-navbar-collapse active"
+            class="collapse navbar-collapse bs-navbar-collapse"
+            :class="{ active: show }"
         >
             <ul class="nav navbar-nav">
                 <navbar-item
@@ -46,6 +47,11 @@ export default {
     components: {
         NavbarHeader,
         NavbarItem
+    },
+    data() {
+        return ({
+            show: false
+        })
     },
 }
 

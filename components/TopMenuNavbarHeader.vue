@@ -1,6 +1,6 @@
 
 <template>
-    <div class="navbar-header">
+    <div class="navbar-header" @click="$emit('click')">
         <button class="navbar-toggle pull-left">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
