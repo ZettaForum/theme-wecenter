@@ -10,30 +10,16 @@
             :class="{ active: show }"
         >
             <ul class="nav navbar-nav">
-                <navbar-item
-                    href="/"
-                    icon="list"
-                    active
-                >
-                    发现
-                </navbar-item>
-
-                <!-- <li><a href="/question/" class="">问题</a></li>
-
-                        <li><a href="/article/" class="">文章</a></li>-->
-                <navbar-item
-                    href="/topic/"
-                    icon="topic"
-                >
-                    话题
-                </navbar-item>
-
-                <navbar-item
-                    href="/help/"
-                    icon="bulb"
-                >
-                    公告
-                </navbar-item>
+                <template v-for="topNavItem of init.topNav">
+                    <navbar-item
+                        :href="topNavItem.href"
+                        :icon="topNavItem.icon"
+                        :key="topNavItem.name"
+                        :active="$route.path == topNavItem.href"
+                    >
+                        {{ topNavItem.name }}
+                    </navbar-item>
+                </template>
             </ul>
         </nav>
     </div>
@@ -48,6 +34,7 @@ export default {
         NavbarHeader,
         NavbarItem
     },
+    inject: ["init"],
     data() {
         return ({
             show: false
