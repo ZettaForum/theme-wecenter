@@ -18,35 +18,7 @@
             <!-- end 用户栏 -->
 
             <!-- 发起 -->
-            <div class="aw-publish-btn">
-
-                <a
-                    id="header_publish"
-                    class="btn-primary"
-                    href="/publish/"
-                ><i class="icon icon-ask"></i>发起</a>
-                <div class="dropdown-list pull-right">
-                    <ul>
-                        <li>
-                            <form
-                                method="post"
-                                action="/publish/"
-                            >
-                                <a onclick="$(this).parents('form').submit();">问题</a>
-                            </form>
-
-                        </li>
-                        <li>
-                            <form
-                                method="post"
-                                action="/publish/article/"
-                            >
-                                <a onclick="$(this).parents('form').submit();">文章</a>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <top-menu-publish-btn></top-menu-publish-btn>
             <!-- end 发起 -->
         </div>
     </div>
@@ -57,13 +29,15 @@ import TopMenuLogo from "./TopMenuLogo.vue"
 import TopMenuSearchBox from "./TopMenuSearchBox.vue"
 import TopMenuNavbar from "./TopMenuNavbar.vue"
 import TopMenuUserNav from "./TopMenuUserNav.vue"
+import TopMenuPublishBtn from "./TopMenuPublishBtn.vue"
 
 export default {
     components: {
         TopMenuLogo,
         TopMenuSearchBox,
         TopMenuNavbar,
-        TopMenuUserNav
+        TopMenuUserNav,
+        TopMenuPublishBtn
     },
     inject: ["init"],
     data() {
