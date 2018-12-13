@@ -20,7 +20,6 @@
                                             rel="nofollow"
                                         >
                                             <img alt="" />
-                                            <i class="icon icon-v"></i>
                                         </a>
                                         <div class="aw-question-content">
                                             <h4>
@@ -131,10 +130,6 @@
                                             class="aw-user-name"
                                         >
                                             userName
-                                            <i
-                                                class="icon-v"
-                                                title="个人认证"
-                                            ></i>
                                         </a>
                                         <p class="signature"></p>
                                         <p><b>1</b> 个问题, <b>1</b> 次赞同</p>

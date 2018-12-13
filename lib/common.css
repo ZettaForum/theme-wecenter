@@ -953,15 +953,6 @@ a.aw-load-more-content {
     font-size: 16px;
 }
 
-.icon-v {
-    color: #a3d700;
-    font-size: 16px;
-}
-
-.icon-v.i-ve {
-    color: #ffca3f;
-}
-
 .icon-down.active:before {
     content: "\e634";
 }
@@ -2342,27 +2333,6 @@ blockquote {
     padding: 14px 0 14px 50px;
 }
 
-.aw-common-list .aw-item .icon-v,
-.aw-feed-list .aw-item .icon-v {
-    position: absolute;
-    left: -5px;
-    top: -5px;
-    width: 18px;
-    height: 18px;
-    background-color: #a3d700;
-    color: #fff;
-    text-align: center;
-    line-height: 18px;
-    font-size: 14px;
-    border-radius: 4px;
-}
-
-.aw-common-list .aw-item .icon-v.i-ve,
-.aw-feed-list .aw-item .icon-v.i-ve {
-    background-color: #ffca3f;
-    color: #fff;
-}
-
 .aw-common-list .aw-item.article .markitup-box {
     max-height: 130px;
     overflow: hidden;
@@ -3567,18 +3537,6 @@ blockquote {
 .aw-card-tips .mod-footer i {
     font-size: 16px;
     vertical-align: -2px;
-}
-
-.aw-card-tips .icon-v {
-    width: 16px;
-    height: 16px;
-    margin: 2px 0 0 3px;
-    background: url('img/icon-v.png') no-repeat \0;
-    font-size: 0px\0;
-}
-
-.aw-card-tips .icon-v.i-ve {
-    background: url('img/icon-v-hover.png') no-repeat \0;
 }
 
 /* @用户下拉 */
