@@ -650,66 +650,6 @@ a.aw-load-more-content {
     border-radius: 0 4px 4px 0;
 }
 
-/* tabs切换样式 */
-
-.aw-nav-tabs {
-    position: relative;
-    z-index: 1;
-    height: 63px;
-    margin: 0;
-    padding: 30px 20px 0;
-    border-color: #e6e6e6;
-}
-
-.aw-nav-tabs.active>li {
-    float: right;
-}
-
-.aw-nav-tabs>li {
-    margin: 0 4px 0 0;
-    font-size: 14px;
-}
-
-.aw-nav-tabs>li>a {
-    line-height: 30px;
-    padding: 0 13px;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.aw-nav-tabs>li>a:hover {
-    border: none;
-    border-bottom: 2px solid #155faa;
-    background-color: #fff;
-    color: #333;
-}
-
-.aw-nav-tabs>li.active a {
-    line-height: 30px;
-    background-color: #fff;
-    border: none;
-    border-bottom: 2px solid #155faa;
-    font-weight: bold;
-    color: #333;
-}
-
-.aw-nav-tabs>li.active a:hover,
-.aw-nav-tabs>li.active a:focus,
-.aw-nav-tabs>li>a:focus {
-    border: none;
-    border-bottom: 2px solid #155faa;
-    background-color: #fff;
-}
-
-.aw-nav-tabs h2 {
-    position: absolute;
-    top: 16px;
-    left: 20px;
-    margin: 0;
-    font-size: 20px;
-}
-
 /* 自定义tab切换 */
 
 .aw-tabs {
@@ -1306,61 +1246,6 @@ a.aw-load-more-content {
 .aw-feed-list .aw-upload-img-list.active img {
     width: auto;
     height: auto;
-    display: block;
-}
-
-/* 动态首页新通知提示box */
-
-.aw-notification-box {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e6e6e6;
-}
-
-.aw-notification-box .icon-tips {
-    display: none;
-}
-
-.aw-notification-box .mod-body,
-.aw-notification-box .mod-footer {
-    padding: 0 20px;
-}
-
-.aw-notification-box .mod-body ul li {
-    position: relative;
-    padding: 10px 0;
-    border-top: 1px dotted #E2E2E2;
-    line-height: 14px;
-}
-
-.aw-notification-box .mod-body ul li:first-child {
-    border-top: none;
-}
-
-.aw-notification-box .mod-body ul li span {
-    font-size: 12px;
-}
-
-.aw-notification-box .mod-body ul li p {
-    margin: 0;
-    line-height: 24px;
-}
-
-.aw-notification-box .icon-tips {
-    position: absolute;
-    right: 0;
-}
-
-.aw-notification-box .mod-body ul li .read {
-    display: none;
-    color: #999;
-}
-
-.aw-notification-box .mod-body ul li .more {
-    margin: 5px 0 0 5px;
-    font-size: 12px;
-}
-
-.aw-notification-box .mod-body ul li:hover .read {
     display: block;
 }
 
@@ -4513,12 +4398,6 @@ blockquote {
     }
     .markitup-box img {
         width: 100% !important;
-    }
-    .aw-nav-tabs {
-        padding: 30px 10px 0;
-    }
-    .aw-nav-tabs>li {
-        margin: 0;
     }
     .aw-common-list .aw-item {
         padding: 14px;
