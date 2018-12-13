@@ -15,10 +15,20 @@ import VueRouter from "vue-router"
 
 import App from "./App.vue"
 import PageNotFound from "./pages/404.vue"
+import HomePage from "./pages/index.vue"
 
 Vue.use(VueRouter)
 
 const routes = [
+    {
+        path: "/",
+        component: HomePage,
+        alias: [
+            "/question/",
+            "/article/",
+            "/explore/"
+        ]
+    },
     // {
     //     path: "/user/:id",
     //     component: User
