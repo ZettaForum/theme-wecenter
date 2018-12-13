@@ -17,7 +17,7 @@
         >
             <img
                 alt=""
-                :src="'lib/img/avatar-mid-img.png'"
+                :src="init.defaultAvatar"
             >
 
         </a>
@@ -36,7 +36,11 @@
 
 <script>
 export default {
-
+    inject: ["init"],
+    data() {
+        return ({
+        })
+    },
 }
 </script>
 

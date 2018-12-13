@@ -5,7 +5,7 @@
         <a
             id="header_publish"
             class="btn-primary"
-            href="/publish/"
+            @click="publish('question')"
         >
             <i class="icon icon-ask"></i>发起
         </a>
@@ -13,21 +13,14 @@
         <div class="dropdown-list pull-right">
             <ul>
                 <li>
-                    <form
-                        method="post"
-                        action="/publish/"
-                    >
-                        <a onclick="$(this).parents('form').submit();">问题</a>
-                    </form>
-
+                    <a @click="publish('question')">
+                        问题
+                    </a>
                 </li>
                 <li>
-                    <form
-                        method="post"
-                        action="/publish/article/"
-                    >
-                        <a onclick="$(this).parents('form').submit();">文章</a>
-                    </form>
+                    <a @click="publish('article')">
+                        文章
+                    </a>
                 </li>
             </ul>
         </div>
@@ -36,7 +29,13 @@
 
 <script>
 export default {
-
+    methods: {
+        publish(type = "question") {
+            this.$router.push({
+                path: `/publish/${type}/`,
+            })
+        },
+    }
 }
 </script>
 
